@@ -1,0 +1,140 @@
+:root{
+    --primary-color: #DAC5A7;
+    --secondary-color: #edd6b6;
+    --border-default: rgba(217, 196, 165, 0.15);
+    --background-default:#0E0E0E;
+    --background-secondary: #1a1a1a;
+
+}
+
+section {
+  height: 100vh;
+  color: var(--primary-color);
+}
+
+a:link {
+  text-decoration: none;
+    color: var(--primary-color)
+}
+a:visited {
+  text-decoration: none;
+    color: var(--primary-color)
+}
+
+a {
+  display: inline-block;
+  padding-bottom: 2px;
+  background-image: linear-gradient(#dac5a7 0 0);
+  background-position: 0 100%; /*OR bottom left*/
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s, background-position 0s 0.3s; /*change after the size immediately*/
+}
+
+a:hover {
+  background-position: 100% 100%; /*OR bottom right*/
+  background-size: 100% 2px;
+}
+
+/* a:focus {
+    text-decoration: underline;
+}
+a:hover,
+a:active {
+  text-decoration: none;
+  color: black;
+} */
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  margin-top: 2%;
+  padding: 1% 1%;
+  /* border-radius: 1rem; */
+  background: #dac5a712;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.9px);
+  -webkit-backdrop-filter: blur(3.9px);
+  border: 1px solid #dac5a738;
+  font-family: 'Satoshi-light', sans-serif;
+}
+
+.nav-item {
+  list-style: none;
+  margin: 0 1rem;
+}
+
+.sticky {
+  /* background-color: #333; */
+  color: white;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+#home{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  padding:0% 15%;
+}
+
+.profile-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: auto;
+  padding: 0% 2.5%;
+  
+}
+
+.profile-image img{
+  border-radius: 50%;
+  /* border-style: solid;
+  border-width: 1%;
+  border-color: var(--secondary-color); */
+  height: 75%;
+  width: auto;
+}
+
+.profile-info{
+  font-family: Satoshi-bold, sans-serif;
+  height: auto;
+  width: 50;
+  padding: 0% 2.5%;
+}
+
+#experience{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.timeline-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  padding:0% 15%;
+}
+
+

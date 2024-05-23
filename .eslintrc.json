@@ -34,7 +34,8 @@
     "plugin:@typescript-eslint/recommended-requiring-type-checking", // contains rules that specifically require type information
     "plugin:@next/next/recommended",
     "next", // https://github.com/vercel/next.js/blob/canary/packages/eslint-config-next/package.json
-    "next/core-web-vitals"
+    "next/core-web-vitals",
+    "plugin:prettier/recommended"
   ],
   "rules": {
     // suppress errors for missing 'import React' in files

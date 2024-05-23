@@ -1,0 +1,75 @@
+{
+  "about": {
+    "fname": "Soumil",
+    "lname": "Singh",
+    "designation": "Backend Developer",
+    "description": "I am a Backend Developer with 3 years of experience in developing scalable and secure applications. I have worked on various technologies like Node.js, Express.js, MongoDB, MySQL, and AWS. I have also worked on various projects like E-commerce, Social Media, and Real-time Chat applications. I am passionate about learning new technologies and implementing them in my projects.",
+    "skills": {
+      "Languages": ["JavaScript", "Typescript", "Python", "Java", "C++", "C"],
+      "Frameworks": ["Node.js", "Express.js", "React.js", "JavaFX", "RestAPI"],
+      "Databases": ["MongoDB", "MySQL", "PostgreSQL", "SQLite"],
+      "Cloud": ["AWS", "Google Cloud", "Azure"],
+      "Tools": ["Git", "Docker", "Postman", "Kubernetes"],
+      "Others": [
+        "Data Structures",
+        "Algorithms",
+        "Design Patterns",
+        "DBMS",
+        "OS",
+        "Networking",
+        "Information Retrievel",
+        "Cryptography and Network Security"
+      ]
+    }
+  },
+  "experience": [
+    {
+      "company": "ABC Technologies",
+      "designation": "Backend Developer",
+      "duration": "Jan 2020 - Present",
+      "description": "I am working as a Backend Developer in the company. I am responsible for developing scalable and secure applications. I have worked on various projects like E-commerce, Social Media, and Real-time Chat applications. I have also worked on technologies like Node.js, Express.js, MongoDB, MySQL, and AWS."
+    },
+    {
+      "company": "XYZ Technologies",
+      "designation": "Software Engineer",
+      "duration": "Jan 2018 - Dec 2019",
+      "description": "I worked as a Software Engineer in the company. I was responsible for developing web applications using technologies like Node.js, Express.js, MongoDB, and MySQL. I have also worked on AWS for deploying applications."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Technology",
+      "major": "Computer Science",
+      "university": "ABC University",
+      "duration": "2014 - 2018"
+    },
+    {
+      "degree": "Higher Secondary School",
+      "major": "Science",
+      "school": "XYZ School",
+      "duration": "2012 - 2014"
+    }
+  ],
+  "projects": [
+    {
+      "title": "E-commerce Application",
+      "description": "Developed an E-commerce application using Node.js, Express.js, MongoDB, and React.js. Implemented features like product listing, product details, cart, checkout, and payment gateway integration.",
+      "duration": "Jan 2020 - Mar 2020"
+    },
+    {
+      "title": "Social Media Application",
+      "description": "Developed a Social Media application using Node.js, Express.js, MongoDB, and React.js. Implemented features like user authentication, post creation, like, comment, and share functionality.",
+      "duration": "Apr 2020 - Jun 2020"
+    },
+    {
+      "title": "Real-time Chat Application",
+      "description": "Developed a Real-time Chat application using Node.js, Express.js, MongoDB, and Socket.io. Implemented features like real-time messaging, group chat, and online status.",
+      "duration": "Jul 2020 - Sep 2020"
+    }
+  ],
+  "contact": {
+    "email": "soumil4561@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/soumilsingh4561/",
+    "github": "https://www.github.com/Soumil4561"
+  }
+}
