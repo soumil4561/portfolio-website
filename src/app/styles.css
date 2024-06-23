@@ -1,24 +1,19 @@
-:root{
-    --primary-color: #DAC5A7;
-    --secondary-color: #edd6b6;
-    --border-default: rgba(217, 196, 165, 0.15);
-    --background-default:#0E0E0E;
-    --background-secondary: #1a1a1a;
-
-}
-
-section {
-  height: 100vh;
-  color: var(--primary-color);
+:root {
+  --primary-color: #dac5a7;
+  --secondary-color: #edd6b6;
+  --border-default: rgba(218, 196, 165, 0.15);
+  --background-default: #0e0e0e;
+  --background-secondary: #1a1a1a;
+  --background-muted: #dac5a710;
 }
 
 a:link {
   text-decoration: none;
-    color: var(--primary-color)
+  color: var(--primary-color);
 }
 a:visited {
   text-decoration: none;
-    color: var(--primary-color)
+  color: var(--primary-color);
 }
 
 a {
@@ -28,7 +23,9 @@ a {
   background-position: 0 100%; /*OR bottom left*/
   background-size: 0% 2px;
   background-repeat: no-repeat;
-  transition: background-size 0.3s, background-position 0s 0.3s; /*change after the size immediately*/
+  transition:
+    background-size 0.3s,
+    background-position 0s 0.3s; /*change after the size immediately*/
 }
 
 a:hover {
@@ -65,7 +62,7 @@ a:active {
   backdrop-filter: blur(3.9px);
   -webkit-backdrop-filter: blur(3.9px);
   border: 1px solid #dac5a738;
-  font-family: 'Satoshi-light', sans-serif;
+  /* font-family: 'Satoshi-light', sans-serif; */
 }
 
 .nav-item {
@@ -81,32 +78,38 @@ a:active {
   z-index: 1000;
 }
 
-#home{
-  display: flex;
+section {
+  display: inline-flex;
   justify-content: center;
   flex-direction: column;
+  color: var(--primary-color);
+  width: 100%;
+  
 }
 
-.home-container{
+.home{
+  height: 100vh;
+}
+
+.home-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 70vh;
-  padding:0% 15%;
+  padding: 0% 15%;
 }
 
-.profile-image{
+.profile-image {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: auto;
   padding: 0% 2.5%;
-  
 }
 
-.profile-image img{
+.profile-image img {
   border-radius: 50%;
   /* border-style: solid;
   border-width: 1%;
@@ -115,26 +118,98 @@ a:active {
   width: auto;
 }
 
-.profile-info{
-  font-family: Satoshi-bold, sans-serif;
+.profile-info {
+  /* font-family: Satoshi-bold, sans-serif; */
   height: auto;
   width: 50;
   padding: 0% 2.5%;
 }
 
-#experience{
-  display: flex;
+.experience {
+  color: var(--primary-color);  
+  display: inline-flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.timeline-container{
+/* .experience-heading{
+  
+} */
+
+.timeline-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70vh;
-  padding:0% 15%;
+  padding: 0% 5%;
 }
 
+.timeline-date {
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--border-default);
+  background-color: var(--background-muted);
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1.5% 1%;
+  margin-left: auto;
+}
 
+/* span class timeline date font. make every letter capital.. also add bold and italic styles*/
+.timeline-date span {
+  /* font-family: Satoshi-Regular, sans-serif; */
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.timeline-heading {
+  /* font-family: Satoshi-Light, sans-serif; */
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding-top: 2.5%;
+}
+
+.timeline-heading-sub {
+  /* font-family: Satoshi-Bold, sans-serif; */
+  font-size: 1rem;
+  padding-top: 2%;
+  font-style: italic;
+}
+
+.timeline-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-content p {
+  /* font-family: Chillax-Light, sans-serif; */
+  font-size: 1rem;
+  line-height: 200%;
+}
+
+/* .projects{
+  color: var(--primary-color);  
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+} */
+
+.projects-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 0%;
+}
+
+.projects-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0% 5%;
+}

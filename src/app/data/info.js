@@ -28,6 +28,8 @@ const experience = [
     role: "Backend Developer Intern",
     company: "ABC Pvt. Ltd.",
     date: "May 2024 - Present",
+    description:
+      "Developed and maintained the backend of the application using Node.js, Express.js, and MongoDB. Implemented REST APIs for various features like user authentication, product listing, and order management. Worked on optimizing the application for performance and scalability.",
     skills: ["Node.js", "Express.js", "MongoDB", "Git"],
   },
   {
@@ -35,6 +37,32 @@ const experience = [
     company: "XYZ Pvt. Ltd.",
     date: "May 2022 - May 2024",
     skills: ["Java", "JavaFX", "MySQL", "Git"],
+    description:
+      "Developed and maintained the backend of the application using Node.js, Express.js, and MongoDB.",
+  },
+  {
+    role: "Backend Developer Intern",
+    company: "ABC Pvt. Ltd.",
+    date: "May 2024 - Present",
+    description:
+      "Developed and maintained the backend of the application using Node.js, Express.js, and MongoDB. Implemented REST APIs for various features like user authentication, product listing, and order management. Worked on optimizing the application for performance and scalability.",
+    skills: ["Node.js", "Express.js", "MongoDB", "Git"],
+  },
+  {
+    role: "Backend Developer Intern",
+    company: "ABC Pvt. Ltd.",
+    date: "May 2024 - Present",
+    description:
+      "Developed and maintained the backend of the application using Node.js, Express.js, and MongoDB. Implemented REST APIs for various features like user authentication, product listing, and order management. Worked on optimizing the application for performance and scalability.",
+    skills: ["Node.js", "Express.js", "MongoDB", "Git"],
+  },
+  {
+    role: "Backend Developer Intern",
+    company: "ABC Pvt. Ltd.",
+    date: "May 2024 - Present",
+    description:
+      "Developed and maintained the backend of the application using Node.js, Express.js, and MongoDB. Implemented REST APIs for various features like user authentication, product listing, and order management. Worked on optimizing the application for performance and scalability.",
+    skills: ["Node.js", "Express.js", "MongoDB", "Git"],
   },
 ];
 
@@ -55,22 +83,60 @@ const education = [
 
 const projects = [
   {
-    title: "E-commerce Website",
+    title: "Personal Webiste",
     description:
-      "Developed an E-commerce website using MERN stack. The website has features like product listing, product details, cart, and payment gateway integration.",
-    skills: ["React.js", "Node.js", "Express.js", "MongoDB", "Stripe"],
+      "Next.JS based personal website for portfolio and maybe blog in future.",
+    skills: ["Next.js", "CSS"],
+    link: "https://github.com/soumil4561/portfolio-website",
+    image: "/images/puzzles.png",
   },
   {
-    title: "Real-time Chat Application",
+    title: "Query by Humming",
     description:
-      "Developed a Real-time Chat application using Socket.io. The application has features like group chat, private chat, and file sharing.",
-    skills: ["Node.js", "Express.js", "Socket.io", "MongoDB"],
+      "A music retrieval system that retrieves songs based on humming input.",
+    skills: ["Python", "Jupyter", "Librosa", "DTW"],
+    link: "https://github.com/soumil4561/hummingbird-query-by-humming",
+    image: "/images/olympus.png",
+  },
+  {
+    title: "Puzzles",
+    description: "A topic based discussion website made using MERN stack.",
+    skills: ["MongoDB", "Express.js", "React.js", "Node.js", "Redux", "CSS"],
+    link: "https://github.com/soumil4561/puzzles-node-backend",
+    image: "/images/puzzles.png",
+  },
+  {
+    title: "Olympus",
+    description:
+      "A hospital management system for managing patients data and appointments.",
+    skills: ["Java", "JavaFX", "MySQL", "SceneBuilder", "OOPS"],
+    link: "https://github.com/soumil4561/olympus-hospital-management-system",
+    image: "/images/olympus.png",
   },
 ];
+
+const contact = [
+  {
+    title: "Email",
+    link: "mailto:soumil4561@gmail.com",
+    icon: "far fa-envelope",
+  },
+  {
+    title: "LinkedIn",
+    link: "https://www.linkedin.com/in/soumil4561/",
+    icon: "fab fa-linkedin",
+  },
+  {
+    title: "GitHub",
+    link: "https://www.github.com/soumil4561/",
+    icon: "fab fa-github",
+  },
+]
 
 module.exports = {
   about,
   experience,
   education,
   projects,
+  contact,
 };

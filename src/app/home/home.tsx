@@ -1,11 +1,10 @@
 import Image from "next/image";
-
 import about from "../data/info.js";
 
 export default function Home() {
   const info = about;
   return (
-    <section id="home">
+    <section id="home" data-target="home" className="home">
       <div className="home-container">
         <div className="profile-image">
           <Image

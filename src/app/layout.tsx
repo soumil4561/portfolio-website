@@ -1,9 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Navbar from "./components/navbar/page";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Soumil Singh",
@@ -16,11 +12,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     <html lang="en">
-      <body className={inter.className}>
-        <Navbar />
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

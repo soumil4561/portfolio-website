@@ -1,0 +1,71 @@
+/**
+* @license
+*
+* Font Family: Satoshi
+* Designed by: Deni Anggara
+* URL: https://www.fontshare.com/fonts/satoshi
+* © 2024 Indian Type Foundry
+*
+* Satoshi Light 
+* Satoshi Regular 
+* Satoshi Italic 
+* Satoshi Bold 
+* Satoshi BoldItalic 
+
+*
+*/
+@font-face {
+  font-family: 'Satoshi-Light';
+  src: url('/fonts/Satoshi-Light.woff2') format('woff2'),
+       url('/fonts/Satoshi-Light.woff') format('woff'),
+       url('/fonts/Satoshi-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi-Regular';
+  src: url('/fonts/Satoshi-Regular.woff2') format('woff2'),
+       url('/fonts/Satoshi-Regular.woff') format('woff'),
+       url('/fonts/Satoshi-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi-Italic';
+  src: url('/fonts/Satoshi-Italic.woff2') format('woff2'),
+       url('/fonts/Satoshi-Italic.woff') format('woff'),
+       url('/fonts/Satoshi-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Satoshi-Bold';
+  src: url('/fonts/Satoshi-Bold.woff2') format('woff2'),
+       url('/fonts/Satoshi-Bold.woff') format('woff'),
+       url('/fonts/Satoshi-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi-BoldItalic';
+  src: url('/fonts/Satoshi-BoldItalic.woff2') format('woff2'),
+       url('/fonts/Satoshi-BoldItalic.woff') format('woff'),
+       url('/fonts/Satoshi-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face{
+  font-family: 'Chillax-Light';
+  src: url('/fonts/Chillax-Light.woff2') format('woff2'),
+       url('/fonts/Chillax-Light.woff') format('woff'),
+       url('/fonts/Chillax-Light.ttf') format('truetype');
+  font-weight:300;
+  font-display: swap;
+  font-style: normal;
+}
+
