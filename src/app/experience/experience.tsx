@@ -12,6 +12,8 @@ export default function Experience() {
     <section id="experience">
       <div className="experience-heading">
         <h1>Experience</h1>
+        {/* subtitle */}
+        <h5>My journey so far</h5>
       </div>
       <div className="timeline-container">
         <Timeline>

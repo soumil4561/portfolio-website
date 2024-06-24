@@ -42,6 +42,9 @@
     backdrop-filter: blur(3.9px);
     -webkit-backdrop-filter: blur(3.9px);
     border: 1px solid #dac5a738;   
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
+    font-size:1.5rem;
 }
 
 
@@ -58,8 +61,20 @@
     transition: transform 0.5s ease;
 }
 
+.gallery-item-content h2{
+    margin: 0;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
+}
+
+.gallery-item-content p{
+    margin: 0;
+    font-family: 'Chillax', sans-serif;
+    font-weight: 400;
+}
+
 .gallery-item:hover .gallery-item-content {
-    transform: translateY(0);
+    transform: translateY(50%);
 }
 
 .gallery-item:hover .gallery-item-title{

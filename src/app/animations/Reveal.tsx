@@ -1,6 +1,5 @@
 import { motion, useAnimation, useInView } from "framer-motion";
-import { Props } from "next/script";
-import react, { useRef, useEffect, PropsWithChildren } from "react";
+import { useRef, useEffect, PropsWithChildren } from "react";
 
 export const Reveal = ({
   children,
@@ -13,6 +12,7 @@ export const Reveal = ({
 
   useEffect(() => {
     if (isInView) {
+      //eslint-disable-next-line
       mainControls.start("visible");
     }
   }, [isInView]);

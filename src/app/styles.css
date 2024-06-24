@@ -5,6 +5,8 @@
   --background-default: #0e0e0e;
   --background-secondary: #1a1a1a;
   --background-muted: #dac5a710;
+  --background-primary: #DAC5A7;
+  --text-inverse:#1D1E1F;
 }
 
 a:link {
@@ -62,7 +64,8 @@ a:active {
   backdrop-filter: blur(3.9px);
   -webkit-backdrop-filter: blur(3.9px);
   border: 1px solid #dac5a738;
-  /* font-family: 'Satoshi-light', sans-serif; */
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 400;
 }
 
 .nav-item {
@@ -125,6 +128,15 @@ section {
   padding: 0% 2.5%;
 }
 
+.profile-info h1 {
+  font-family: Chillax, sans-serif;
+  font-weight: 400;
+}
+
+.profile-info p{
+  font-family: Chillax, sans-serif;
+}
+
 .experience {
   color: var(--primary-color);  
   display: inline-flex;
@@ -132,9 +144,24 @@ section {
   flex-direction: column;
 }
 
-/* .experience-heading{
-  
-} */
+.experience-heading{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience-heading h1{
+  font-family: Satoshi, sans-serif;
+  font-weight: 500;
+  font-size: 5rem;
+  margin-bottom: 0;
+}
+
+.experience-heading h5{
+  font-family: Chillax, sans-serif;
+  font-weight: 300;
+}
 
 .timeline-container {
   display: flex;
@@ -160,23 +187,25 @@ section {
 
 /* span class timeline date font. make every letter capital.. also add bold and italic styles*/
 .timeline-date span {
-  /* font-family: Satoshi-Regular, sans-serif; */
+  font-family: Satoshi, sans-serif;
+  font-weight: 400;
   text-transform: uppercase;
   font-size: 0.75rem;
 }
 
 .timeline-heading {
-  /* font-family: Satoshi-Light, sans-serif; */
+  font-family: Satoshi, sans-serif;
+  font-weight: 400;
   font-size: 1.5rem;
   text-transform: uppercase;
   padding-top: 2.5%;
 }
 
 .timeline-heading-sub {
-  /* font-family: Satoshi-Bold, sans-serif; */
+  font-family: Satoshi, sans-serif;
+  font-weight: 300;
   font-size: 1rem;
   padding-top: 2%;
-  font-style: italic;
 }
 
 .timeline-content {
@@ -187,10 +216,13 @@ section {
 }
 
 .timeline-content p {
-  /* font-family: Chillax-Light, sans-serif; */
+  font-family: Chillax, sans-serif;
+  font-weight: 300;
+  color: var(--primary-color);
   font-size: 1rem;
   line-height: 200%;
 }
+
 
 /* .projects{
   color: var(--primary-color);  
@@ -201,9 +233,22 @@ section {
 
 .projects-heading{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2% 0%;
+}
+
+.projects-heading h1{
+  font-family: Satoshi, sans-serif;
+  font-weight: 500;
+  font-size: 5rem;
+  margin-bottom: 0;
+}
+
+.projects-heading h5{
+  font-family: Chillax, sans-serif;
+  font-weight: 300;
 }
 
 .projects-container{
@@ -213,3 +258,207 @@ section {
   align-items: center;
   padding: 0% 5%;
 }
+
+.contact-heading{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 0%;
+}
+
+.contact-heading h1{
+  font-family: Satoshi, sans-serif;
+  font-weight: 500;
+  font-size: 5rem;
+  margin: 0;
+}
+
+.contact-heading h5{
+  font-family: Chillax, sans-serif;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.contact-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0% 5%;
+}
+
+.contact-container h2{
+  font-family: Satoshi, sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.contact-container h5{
+  font-family: Satoshi, sans-serif;
+  text-decoration: uppercase;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 2% 0%;
+  margin: 0;
+}
+
+.contact-subtitle{
+  text-decoration: uppercase;
+  font-family: Satoshi, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 2% 0%;
+}
+
+.contact-links{
+  /* grid display of boxes */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  padding: 2% 0%;
+  width: 80%;;
+}
+
+.contact-item{
+  width: 100%;
+  padding: 2% 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--border-default);
+  background-color: var(--background-muted);
+  color: var(--primary-color);
+}
+
+.contact-item a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1% 0%;
+  text-transform: uppercase;
+  font-size: 1rem;
+  
+}
+
+.contact-icon icon{
+  width: 1%;
+  padding-top: 1%;
+  padding-right: 2%; 
+  height: 1em;
+}
+
+.social-links{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 0%;
+  font-size:2rem;
+}
+
+.contact-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 0%;
+  width: 80%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--border-default);
+  background-color: var(--background-muted);
+  color: var(--primary-color);
+}
+
+.contact-card-container{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+  padding: 0% 5%;
+  width: 80%;
+}
+
+.name-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 0%;
+  width: 100%;
+}
+
+.name-box input{
+  width: 100%;
+  padding: 1% 0%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--border-default);
+  background-color: var(--background-muted);
+  color: var(--primary-color);
+  outline: none;
+}
+
+.email-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 0%;
+  width: 100%;
+  
+}
+
+.email-box input{
+  width: 100%;
+  padding: 1% 1%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--border-default);
+  background-color: var(--background-muted);
+  color: var(--primary-color);
+  outline: none;
+}
+
+.message-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 0%;
+  width: 100%;
+}
+
+.message-box textarea{
+  width: 100%;
+  padding: 1% 0%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--border-default);
+  background-color: var(--background-muted);
+  color: var(--primary-color);
+  outline: none;
+}
+
+.submit-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 0%;
+  width: 100%;
+}
+
+.submit-button button{
+  width: 100%;
+  padding: 1% 0%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--border-default);
+  background-color: var(--background-primary);
+  color: var(--text-inverse);
+  font-family: Satoshi, sans-serif;
+  font-weight: 700;
+  
+}
+

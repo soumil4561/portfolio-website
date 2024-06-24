@@ -25,7 +25,7 @@ export default function GalleryItem({
         objectFit="cover" // Adjust as needed
       />
       <div className="gallery-item-title">
-        <h2>{title}</h2>
+        {title}
       </div>
       <div className="gallery-item-content">
         <h2>{title}</h2>

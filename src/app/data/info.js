@@ -119,19 +119,19 @@ const contact = [
   {
     title: "Email",
     link: "mailto:soumil4561@gmail.com",
-    icon: "far fa-envelope",
+    icon: "/images/email.svg",
   },
   {
     title: "LinkedIn",
     link: "https://www.linkedin.com/in/soumil4561/",
-    icon: "fab fa-linkedin",
+    icon: "/images/linkedin.svg",
   },
   {
     title: "GitHub",
     link: "https://www.github.com/soumil4561/",
-    icon: "fab fa-github",
+    icon: "/images/github.svg",
   },
-]
+];
 
 module.exports = {
   about,

@@ -8,6 +8,7 @@ export default function Projects() {
     <section id="projects">
       <div className="projects-heading">
         <h1>Projects</h1>
+        <h5>Some of my work</h5>
       </div>
       <div className="projects-container">
         <Gallery>
