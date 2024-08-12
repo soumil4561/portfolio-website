@@ -3,8 +3,6 @@
 import Timeline from "../components/timeline/timeline";
 import TimelineItem from "../components/timeline/timeline-item";
 
-import "react-vertical-timeline-component/style.min.css";
-
 import { experience } from "../data/info.js";
 
 export default function Experience() {

@@ -1,7 +1,8 @@
 const about = {
   fname: "Soumil",
   lname: "Singh",
-  designation: "Backend Developer",
+  designation: "Software Developer",
+  tagline: "Software developer with a passion for learning and building robust applications.",
   description:
     "I am a Backend Developer with 3 years of experience in developing scalable and secure applications. I have worked on various technologies like Node.js, Express.js, MongoDB, MySQL, and AWS. I have also worked on various projects like E-commerce, Social Media, and Real-time Chat applications. I am passionate about learning new technologies and implementing them in my projects.",
   skills: {
@@ -88,7 +89,7 @@ const projects = [
       "Next.JS based personal website for portfolio and maybe blog in future.",
     skills: ["Next.js", "CSS"],
     link: "https://github.com/soumil4561/portfolio-website",
-    image: "/images/puzzles.png",
+    image: "/images/portfolio.jpg",
   },
   {
     title: "Query by Humming",
@@ -96,14 +97,14 @@ const projects = [
       "A music retrieval system that retrieves songs based on humming input.",
     skills: ["Python", "Jupyter", "Librosa", "DTW"],
     link: "https://github.com/soumil4561/hummingbird-query-by-humming",
-    image: "/images/olympus.png",
+    image: "/images/music.jpg",
   },
   {
     title: "Puzzles",
     description: "A topic based discussion website made using MERN stack.",
     skills: ["MongoDB", "Express.js", "React.js", "Node.js", "Redux", "CSS"],
     link: "https://github.com/soumil4561/puzzles-node-backend",
-    image: "/images/puzzles.png",
+    image: "/images/puzzles1.jpg",
   },
   {
     title: "Olympus",
@@ -111,7 +112,7 @@ const projects = [
       "A hospital management system for managing patients data and appointments.",
     skills: ["Java", "JavaFX", "MySQL", "SceneBuilder", "OOPS"],
     link: "https://github.com/soumil4561/olympus-hospital-management-system",
-    image: "/images/olympus.png",
+    image: "/images/olympus.jpg",
   },
 ];
 

@@ -9,7 +9,7 @@ export default function Home() {
         <div className="profile-image">
           <Image
             className="profile-image"
-            src="/images/jb&w.jpg"
+            src="/images/photo8.jpg"
             width={500}
             height={500}
             alt="Picture of the author"
@@ -17,10 +17,11 @@ export default function Home() {
         </div>
         <div className="profile-info">
           <h1>
-            Hi , I&apos;m {(info as { about: { fname: string } }).about.fname}
+            Hi, I&apos;m {(info as { about: { fname: string } }).about.fname}
+            {/* {info.about.designation} */}
           </h1>
           <p>
-            {(info as { about: { description: string } }).about.description}
+            {info.about.tagline}
           </p>
         </div>
       </div>

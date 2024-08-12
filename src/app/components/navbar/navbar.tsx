@@ -1,45 +1,42 @@
-import Link from "next/link";
-
+"use client";
 export default function Navbar() {
-  const navItems = [
-    { name: "HOME", link: "#home" },
-    { name: "EXPERIENCE", link: "#experience" },
-    { name: "PROJECTS", link: "#projects" },
-    { name: "CONTACT", link: "#contact" },
-  ];
-
-  // const handleNavItemClick = (e:any, link:string) => {
-  //   e.preventDefault(); // Prevent the default link behavior
-
-  //   let targetRef;
-  //   switch (link) {
-  //     case "#home":
-  //       targetRef = homeRef;
-  //       break;
-  //     case "#experience":
-  //       targetRef = experienceRef;
-  //       break;
-  //     case "#projects":
-  //       targetRef = projectsRef;
-  //       break;
-  //     case "#contact":
-  //       targetRef = contactRef;
-  //       break;
-  //   }
-
-  //   if (targetRef && targetRef.current) {
-  //     targetRef.current.scrollIntoView({ behavior: 'smooth' });
-  //   }
-  // };
+  const handleNavClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    let elem;
+    switch (e.currentTarget.innerText) {
+      case "HOME":
+        elem = document.getElementById("home");
+        break;
+      case "ABOUT":
+        elem = document.getElementById("about");
+        break;
+      case "PROJECTS":
+        elem = document.getElementById("projects");
+        break;
+      case "LET'S TALK":
+        elem = document.getElementById("contact");
+        break;
+      default:
+        elem = null;
+    }
+    elem?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div className="navbar-container">
       <nav className="navbar sticky">
-        {navItems.map((item, index) => (
-          <Link key={index} href={item.link}>
-            {item.name}
-          </Link>
-        ))}
+        <button className="default-nav-button" onClick={handleNavClick}>
+          Home
+        </button>
+        <button className="default-nav-button" onClick={handleNavClick}>
+          About
+        </button>
+        <button className="default-nav-button" onClick={handleNavClick}>
+          Projects
+        </button>
+        <button className="primary-nav-button" onClick={handleNavClick}>
+          Let's Talk
+        </button>
       </nav>
     </div>
   );

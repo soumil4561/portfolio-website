@@ -4,9 +4,10 @@
   --border-default: rgba(218, 196, 165, 0.15);
   --background-default: #0e0e0e;
   --background-secondary: #1a1a1a;
+  --background-tertiary: #dac5a712;
   --background-muted: #dac5a710;
-  --background-primary: #DAC5A7;
-  --text-inverse:#1D1E1F;
+  --background-primary: #dac5a7;
+  --text-inverse: #1d1e1f;
 }
 
 a:link {
@@ -55,22 +56,70 @@ a:active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 40%;
+  width: 30%;
   margin-top: 2%;
   padding: 1% 1%;
   /* border-radius: 1rem; */
-  background: #dac5a712;
+  background: var(--background-tertiary);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.9px);
   -webkit-backdrop-filter: blur(3.9px);
   border: 1px solid #dac5a738;
-  font-family: 'Satoshi', sans-serif;
+  font-family: "Satoshi", sans-serif;
   font-weight: 400;
 }
 
-.nav-item {
-  list-style: none;
-  margin: 0 1rem;
+.default-nav-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  background-color: transparent;
+  color: var(--primary-color);
+  font-family: Satoshi, sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  position: relative; /* Required for the ::after pseudo-element */
+  transition: color 0.3s;
+}
+
+.default-nav-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.default-nav-button:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.primary-nav-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  border-radius: 2px;
+  padding: 2% 3%;
+  background-color: var(--primary-color);
+  color: var(--background-default);
+  font-family: Satoshi, sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  position: relative; /* Required for the ::after pseudo-element */
+  transition: background-color 0.3s ease, color 0.3s;
+}
+
+/* on hover, the button should light in colour up a little in transform */
+.primary-nav-button:hover {
+  background-color: #edd6b6;
 }
 
 .sticky {
@@ -87,10 +136,9 @@ section {
   flex-direction: column;
   color: var(--primary-color);
   width: 100%;
-  
 }
 
-.home{
+.home {
   height: 100vh;
 }
 
@@ -129,36 +177,86 @@ section {
 }
 
 .profile-info h1 {
-  font-family: Chillax, sans-serif;
+  font-family: Satoshi, sans-serif;
   font-weight: 400;
+  font-size: 3rem;
 }
 
-.profile-info p{
+.profile-info p {
   font-family: Chillax, sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.about-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0% 5%;
+}
+
+.about-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 0%;
+}
+
+.about-heading h1 {
+  font-family: Satoshi, sans-serif;
+  font-weight: 400;
+  font-size: 5rem;
+  margin: 0;
+}
+
+.about-heading h5 {
+  font-family: Chillax, sans-serif;
+  font-weight: 300;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content p {
+  font-family: Chillax, sans-serif;
+  font-weight: 300;
+  color: var(--primary-color);
+  font-size: 1rem;
+  line-height: 200%;
+}
+
+.resume-btn{
+  
 }
 
 .experience {
-  color: var(--primary-color);  
+  color: var(--primary-color);
   display: inline-flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.experience-heading{
+.experience-heading {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.experience-heading h1{
+.experience-heading h1 {
   font-family: Satoshi, sans-serif;
   font-weight: 500;
   font-size: 5rem;
   margin-bottom: 0;
 }
 
-.experience-heading h5{
+.experience-heading h5 {
   font-family: Chillax, sans-serif;
   font-weight: 300;
 }
@@ -223,7 +321,6 @@ section {
   line-height: 200%;
 }
 
-
 /* .projects{
   color: var(--primary-color);  
   display: inline-flex;
@@ -231,7 +328,7 @@ section {
   flex-direction: column;
 } */
 
-.projects-heading{
+.projects-heading {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -239,226 +336,23 @@ section {
   padding: 2% 0%;
 }
 
-.projects-heading h1{
+.projects-heading h1 {
   font-family: Satoshi, sans-serif;
   font-weight: 500;
   font-size: 5rem;
   margin-bottom: 0;
 }
 
-.projects-heading h5{
+.projects-heading h5 {
   font-family: Chillax, sans-serif;
   font-weight: 300;
 }
 
-.projects-container{
+.projects-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 0% 5%;
-}
-
-.contact-heading{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2% 0%;
-}
-
-.contact-heading h1{
-  font-family: Satoshi, sans-serif;
-  font-weight: 500;
-  font-size: 5rem;
-  margin: 0;
-}
-
-.contact-heading h5{
-  font-family: Chillax, sans-serif;
-  font-weight: 300;
-  margin-bottom: 0;
-}
-
-.contact-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0% 5%;
-}
-
-.contact-container h2{
-  font-family: Satoshi, sans-serif;
-  font-weight: 300;
-  font-size: 2rem;
-  margin: 0;
-}
-
-.contact-container h5{
-  font-family: Satoshi, sans-serif;
-  text-decoration: uppercase;
-  font-weight: 400;
-  font-size: 1rem;
-  padding: 2% 0%;
-  margin: 0;
-}
-
-.contact-subtitle{
-  text-decoration: uppercase;
-  font-family: Satoshi, sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  padding: 2% 0%;
-}
-
-.contact-links{
-  /* grid display of boxes */
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
-  padding: 2% 0%;
-  width: 80%;;
-}
-
-.contact-item{
-  width: 100%;
-  padding: 2% 0%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  border-style: solid;
-  border-width: 1px;
-  border-color: var(--border-default);
-  background-color: var(--background-muted);
-  color: var(--primary-color);
-}
-
-.contact-item a{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1% 0%;
-  text-transform: uppercase;
-  font-size: 1rem;
-  
-}
-
-.contact-icon icon{
-  width: 1%;
-  padding-top: 1%;
-  padding-right: 2%; 
-  height: 1em;
-}
-
-.social-links{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 2% 0%;
-  font-size:2rem;
-}
-
-.contact-card{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2% 0%;
-  width: 80%;
-  border-style: solid;
-  border-width: 1px;
-  border-color: var(--border-default);
-  background-color: var(--background-muted);
-  color: var(--primary-color);
-}
-
-.contact-card-container{
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
-  padding: 0% 5%;
-  width: 80%;
-}
-
-.name-box{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2% 0%;
-  width: 100%;
-}
-
-.name-box input{
-  width: 100%;
-  padding: 1% 0%;
-  border-style: solid;
-  border-width: 1px;
-  border-color: var(--border-default);
-  background-color: var(--background-muted);
-  color: var(--primary-color);
-  outline: none;
-}
-
-.email-box{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2% 0%;
-  width: 100%;
-  
-}
-
-.email-box input{
-  width: 100%;
-  padding: 1% 1%;
-  border-style: solid;
-  border-width: 1px;
-  border-color: var(--border-default);
-  background-color: var(--background-muted);
-  color: var(--primary-color);
-  outline: none;
-}
-
-.message-box{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2% 0%;
-  width: 100%;
-}
-
-.message-box textarea{
-  width: 100%;
-  padding: 1% 0%;
-  border-style: solid;
-  border-width: 1px;
-  border-color: var(--border-default);
-  background-color: var(--background-muted);
-  color: var(--primary-color);
-  outline: none;
-}
-
-.submit-button{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2% 0%;
-  width: 100%;
-}
-
-.submit-button button{
-  width: 100%;
-  padding: 1% 0%;
-  border-style: solid;
-  border-width: 1px;
-  border-color: var(--border-default);
-  background-color: var(--background-primary);
-  color: var(--text-inverse);
-  font-family: Satoshi, sans-serif;
-  font-weight: 700;
-  
 }
 

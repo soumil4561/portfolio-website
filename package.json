@@ -10,18 +10,15 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.5.2",
-    "@fortawesome/free-brands-svg-icons": "^6.5.2",
-    "@fortawesome/free-regular-svg-icons": "^6.5.2",
-    "@fortawesome/free-solid-svg-icons": "^6.5.2",
-    "@fortawesome/react-fontawesome": "^0.2.2",
+    "dotenv": "^16.4.5",
     "font-awesome": "^4.7.0",
     "framer-motion": "^11.2.11",
     "husky": "^9.0.11",
     "next": "14.2.3",
+    "nodemailer": "^6.9.14",
+    "phosphor-react": "^1.4.1",
     "react": "^18",
-    "react-dom": "^18",
-    "react-vertical-timeline-component": "^3.6.0"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.2.3",
