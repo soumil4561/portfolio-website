@@ -120,18 +120,23 @@ const contact = [
   {
     title: "Email",
     link: "mailto:soumil4561@gmail.com",
-    icon: "/images/email.svg",
+    icon: "envelope",
   },
   {
     title: "LinkedIn",
     link: "https://www.linkedin.com/in/soumil4561/",
-    icon: "/images/linkedin.svg",
+    icon: "linkedin",
   },
   {
-    title: "GitHub",
+    title: "Github",
     link: "https://www.github.com/soumil4561/",
-    icon: "/images/github.svg",
+    icon: "github",
   },
+  {
+    title: "PGP Key",
+    link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    icon: "key",
+  }
 ];
 
 module.exports = {

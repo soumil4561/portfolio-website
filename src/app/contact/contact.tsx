@@ -1,8 +1,10 @@
 "use client";
 import "./contact.css";
-import { useState, useRef, useEffect } from "react";
+import { useState , useRef } from "react";
 import { contact } from "../data/info";
 import { motion, useInView } from "framer-motion";
+import ArrowBtn from "../components/arrow-btn/arrow-btn";
+const { GithubLogo, LinkedinLogo, Key, Envelope, Question } = require("phosphor-react");
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -13,19 +15,6 @@ export default function Contact() {
   const [error, setError] = useState("");
   const contactCardRef = useRef(null);
   const isInView = useInView(contactCardRef, { once: true });
-
-  const formRef = useRef(null);
-  const [formHeight, setFormHeight] = useState(0);
-
-  useEffect(() => {
-    if (formRef.current) {
-      setFormHeight(formRef.current.clientHeight);
-    }
-  }, [isLoading, isSuccess]);
-
-  useEffect(() => {
-    console.log("isInView:", isInView);
-  }, [isInView]);
 
   const validateEmail = (email: string) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -108,16 +97,28 @@ export default function Contact() {
           {contact.map((item, index) => (
             <motion.div
               key={index}
-              className="contact-item"
               initial={{ opacity: 0, x: -50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="contact-icon"></div>
-              <a href={item.link} target="_blank" rel="noreferrer">
-                <span>{item.title}</span>
-              </a>
-              <div className="arrow"></div>
+            <ArrowBtn
+              name={item.title}
+              onClick={() => {
+                window.open(item.link, "_blank");
+              }}
+              icon={
+                item.icon === "github" ? (
+                  <GithubLogo size={20} />
+                ) : item.icon === "linkedin" ? (
+                  <LinkedinLogo size={20} />
+                ) : item.icon === "key" ? (
+                  <Key size={20} />
+                ) : item.icon === "envelope" ? (
+                  <Envelope size={20} />
+                ) : <Question size={20} />
+              }
+              key={index}
+            />
             </motion.div>
           ))}
         </div>
@@ -133,7 +134,7 @@ export default function Contact() {
             <h2>Let&apos;s get in touch</h2>
             {error && <p className="error">{error}</p>}
             {!isLoading && !isSuccess && (
-              <div ref={formRef}>
+              <div>
                 <div className="name-box">
                   <motion.input
                     type="text"
@@ -183,14 +184,7 @@ export default function Contact() {
                   Send Message
                 </motion.button>
               )}
-              {isLoading && (
-                <motion.div
-                  className="loading-box"
-                  initial={{ height: "40px", y: formHeight }}
-                  animate={{ height: formHeight, y: 0 }}
-                  transition={{ duration: 0.5 }}
-                ></motion.div>
-              )}
+              {isLoading && <div className="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>}
               {isSuccess && <div className="success-tick">✔</div>}
             </div>
           </div>
