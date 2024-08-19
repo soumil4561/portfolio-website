@@ -10,6 +10,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@types/nodemailer": "^6.4.15",
     "dotenv": "^16.4.5",
     "font-awesome": "^4.7.0",
     "framer-motion": "^11.2.11",

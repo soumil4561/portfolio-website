@@ -16,7 +16,7 @@ export default function About() {
         </div>
         <div className="about-content">
           <div className="about-text">
-            <h2>Hi, I'm Soumil Singh</h2>
+            <h2>Hi, I&apos;m Soumil Singh</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
               tincidunt, augue nec ultricies ultricies, libero libero facilisis

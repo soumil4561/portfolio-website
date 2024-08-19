@@ -35,7 +35,7 @@ export default function Navbar() {
           Projects
         </button>
         <button className="primary-nav-button" onClick={handleNavClick}>
-          Let's Talk
+          Let&apos;s Talk
         </button>
       </nav>
     </div>

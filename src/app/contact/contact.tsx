@@ -1,10 +1,17 @@
 "use client";
 import "./contact.css";
-import { useState , useRef } from "react";
+import React from "react";
+import { useState, useRef } from "react";
 import { contact } from "../data/info";
 import { motion, useInView } from "framer-motion";
 import ArrowBtn from "../components/arrow-btn/arrow-btn";
-const { GithubLogo, LinkedinLogo, Key, Envelope, Question } = require("phosphor-react");
+import {
+  GithubLogo,
+  LinkedinLogo,
+  Key,
+  Envelope,
+  Question,
+} from "phosphor-react";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -21,22 +28,28 @@ export default function Contact() {
     return re.test(email);
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleClick = (e: React.MouseEvent | React.KeyboardEvent) => {
+    handleSubmit(e).catch(error => {
+      console.error('Error during form submission:', error);
+    });
+  };
+
+  const handleSubmit = async (e: React.MouseEvent | React.KeyboardEvent) => {
     e.preventDefault();
     setError("");
 
     if (!name) {
-      var nameBox = document.getElementById("name");
+      const nameBox = document.getElementById("name");
       nameBox?.classList.add("highlight");
     }
 
     if (!email) {
-      var emailBox = document.getElementById("email");
+      const emailBox = document.getElementById("email");
       emailBox?.classList.add("highlight");
     }
 
     if (!message) {
-      var messageBox = document.getElementById("message");
+      const messageBox = document.getElementById("message");
       messageBox?.classList.add("highlight");
     }
 
@@ -50,7 +63,7 @@ export default function Contact() {
     }
 
     setIsLoading(true);
-    let data = { name, email, message };
+    const data = { name, email, message };
 
     try {
       const response = await fetch("/api/contact", {
@@ -62,17 +75,15 @@ export default function Contact() {
         body: JSON.stringify(data),
       });
 
-      if (response.status === 200) {
-        setTimeout(() => {
-          setIsLoading(true);
-          setTimeout(() => {
-            setIsLoading(false);
-            setIsSuccess(true);
-          }, 1000);
-        }, 500); // Delay to allow the expansion animation to play
+      if (response.ok) {
+        setIsLoading(false);
+        setIsSuccess(true);
         setName("");
         setEmail("");
         setMessage("");
+      } else {
+        setError("Something went wrong. Please try again later.");
+        setIsLoading(false);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -101,24 +112,26 @@ export default function Contact() {
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-            <ArrowBtn
-              name={item.title}
-              onClick={() => {
-                window.open(item.link, "_blank");
-              }}
-              icon={
-                item.icon === "github" ? (
-                  <GithubLogo size={20} />
-                ) : item.icon === "linkedin" ? (
-                  <LinkedinLogo size={20} />
-                ) : item.icon === "key" ? (
-                  <Key size={20} />
-                ) : item.icon === "envelope" ? (
-                  <Envelope size={20} />
-                ) : <Question size={20} />
-              }
-              key={index}
-            />
+              <ArrowBtn
+                name={item.title}
+                onClick={() => {
+                  window.open(item.link, "_blank");
+                }}
+                icon={
+                  item.icon === "github" ? (
+                    <GithubLogo size={20} />
+                  ) : item.icon === "linkedin" ? (
+                    <LinkedinLogo size={20} />
+                  ) : item.icon === "key" ? (
+                    <Key size={20} />
+                  ) : item.icon === "envelope" ? (
+                    <Envelope size={20} />
+                  ) : (
+                    <Question size={20} />
+                  )
+                }
+                key={index}
+              />
             </motion.div>
           ))}
         </div>
@@ -177,14 +190,26 @@ export default function Contact() {
               {!isLoading && !isSuccess && (
                 <motion.button
                   type="submit"
-                  onClick={handleSubmit}
+                  onClick={handleClick}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
                   Send Message
                 </motion.button>
               )}
-              {isLoading && <div className="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>}
+              {isLoading && (
+                <div className="lds-grid">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              )}
               {isSuccess && <div className="success-tick">✔</div>}
             </div>
           </div>
@@ -193,5 +218,3 @@ export default function Contact() {
     </section>
   );
 }
-
-//wait for 5 seconds
