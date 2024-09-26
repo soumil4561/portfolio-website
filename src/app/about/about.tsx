@@ -16,13 +16,13 @@ export default function About() {
         </div>
         <div className="about-content">
           <div className="about-text">
-            <h2>Hi, I&apos;m Soumil Singh</h2>
+            <h2>Hi, I&apos;m Soumil</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              tincidunt, augue nec ultricies ultricies, libero libero facilisis
-              purus, nec ultricies libero libero nec. Sed tincidunt, augue nec
-              ultricies ultricies, libero libero facilisis purus, nec ultricies
-              libero libero nec.
+            I am a passionate software developer currently in my final year of college, where I am honing my skills in computer science and software engineering. 
+            With a solid foundation in data structures, algorithms, and object-oriented programming, I enjoy tackling complex problems and turning ideas into efficient, scalable solutions. 
+            I am constantly exploring new technologies and methodologies to stay at the forefront of the industry. My academic journey, combined with hands-on project experience, 
+            has equipped me with the tools and mindset to contribute effectively in dynamic development environments. 
+            I&apos;m excited to bring my skills and enthusiasm to real-world challenges as I transition into a professional software development role.
               <br />
               <br/>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
