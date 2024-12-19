@@ -15,7 +15,7 @@
     "font-awesome": "^4.7.0",
     "framer-motion": "^11.2.11",
     "husky": "^9.0.11",
-    "next": "14.2.3",
+    "next": "^14.2.13",
     "nodemailer": "^6.9.14",
     "phosphor-react": "^1.4.1",
     "react": "^18",
