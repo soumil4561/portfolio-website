@@ -15,8 +15,8 @@ export default function RootLayout({
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     <html lang="en">
       <head>
-        <link
-          href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,700&display=swap"
+        {/* <link
+          href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,501,700,701&display=swap"
           rel="stylesheet"
         />
         <link
@@ -26,7 +26,7 @@ export default function RootLayout({
         <link
           href="https://api.fontshare.com/v2/css?f[]=chillax@300,400&display=swap"
           rel="stylesheet"
-        />
+        /> */}
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>

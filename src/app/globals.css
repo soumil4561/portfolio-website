@@ -11,3 +11,17 @@ body {
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "Chillax";
+  src: url("../../public/fonts/Chillax-Variable.ttf") format("truetype");
+  font-weight: 100 900; /* Variable fonts support a range */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../../public/fonts/Satoshi-Variable.ttf") format("truetype");
+  font-weight: 100 900; /* Supports multiple weights */
+  font-style: normal;
+}
