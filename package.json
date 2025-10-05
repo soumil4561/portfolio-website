@@ -7,8 +7,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "prepare": "husky"
+    "lint": "next lint --check",
+    "lint:fix": "next lint",
+    "prepare": "husky install",
+    "format": "prettier --write .",
+    "type-check": "tsc --noEmit",
+    "check": "npm run type-check && npm run lint"
+
   },
   "dependencies": {
     "@types/nodemailer": "^6.4.15",
@@ -33,7 +38,17 @@
     "eslint-config-next": "14.2.3",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
+    "lint-staged": "^16.2.3",
     "prettier": "^3.2.5",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "next lint --fix",
+      "prettier --write"
+    ],
+    "*.{css,scss,md}": [
+      "prettier --write"
+    ]
   }
 }
