@@ -2,14 +2,13 @@
   "name": "portfolio-website",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --check",
-    "lint:fix": "next lint",
-    "prepare": "husky install",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "prepare": "husky",
     "format": "prettier --write .",
     "type-check": "tsc --noEmit",
     "check": "npm run type-check && npm run lint"
