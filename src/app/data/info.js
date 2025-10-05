@@ -34,37 +34,13 @@ const experience = [
     skills: ["Node.js", "Express.js", "MongoDB", "Git"],
   },
   {
-    role: "Software Developer",
-    company: "XYZ Pvt. Ltd.",
+    role: "Software Developer Intern",
+    company: "Multiplayr Pvt. Ltd.",
     date: "May 2022 - May 2024",
     skills: ["Java", "JavaFX", "MySQL", "Git"],
     description:
       "Developed and maintained the backend of the application using Node.js, Express.js, and MongoDB.",
-  },
-  {
-    role: "Backend Developer Intern",
-    company: "ABC Pvt. Ltd.",
-    date: "May 2024 - Present",
-    description:
-      "Developed and maintained the backend of the application using Node.js, Express.js, and MongoDB. Implemented REST APIs for various features like user authentication, product listing, and order management. Worked on optimizing the application for performance and scalability.",
-    skills: ["Node.js", "Express.js", "MongoDB", "Git"],
-  },
-  {
-    role: "Backend Developer Intern",
-    company: "ABC Pvt. Ltd.",
-    date: "May 2024 - Present",
-    description:
-      "Developed and maintained the backend of the application using Node.js, Express.js, and MongoDB. Implemented REST APIs for various features like user authentication, product listing, and order management. Worked on optimizing the application for performance and scalability.",
-    skills: ["Node.js", "Express.js", "MongoDB", "Git"],
-  },
-  {
-    role: "Backend Developer Intern",
-    company: "ABC Pvt. Ltd.",
-    date: "May 2024 - Present",
-    description:
-      "Developed and maintained the backend of the application using Node.js, Express.js, and MongoDB. Implemented REST APIs for various features like user authentication, product listing, and order management. Worked on optimizing the application for performance and scalability.",
-    skills: ["Node.js", "Express.js", "MongoDB", "Git"],
-  },
+  }
 ];
 
 const education = [
