@@ -11,8 +11,12 @@
     "prepare": "husky",
     "format": "prettier --write .",
     "type-check": "tsc --noEmit",
-    "check": "npm run type-check && npm run lint"
-
+    "check": "npm run type-check && npm run lint",
+    "docker:dev:build": "docker build --target dev -t portfolio-dev:${VERSION:-dev} .",
+    "docker:prod:build": "docker build --target prod -t portfolio:${VERSION:-1.0.0} .",
+    "docker-compose:dev:up": "VERSION=${VERSION:-dev} docker compose --env-file ${ENV_FILE:-.env.local} up --build dev",
+    "docker-compose:prod:up": "VERSION=${VERSION:-1.0.0} docker compose --env-file ${ENV_FILE:-.env.local} up --build prod",
+    "docker-compose:down": "docker compose down --rmi local --volumes"
   },
   "dependencies": {
     "@types/nodemailer": "^6.4.15",
@@ -23,7 +27,8 @@
     "nodemailer": "^6.9.14",
     "phosphor-react": "^1.4.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "sharp": "^0.34.4"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.2.3",
