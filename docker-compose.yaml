@@ -1,0 +1,22 @@
+services:
+  dev:
+    build:
+      context: .
+      target: dev
+    image: portfolio:${VERSION:-dev}
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.local
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    command: npm run dev
+
+  prod:
+    build:
+      context: .
+      target: prod
+    image: portfolio:${VERSION:-1.0.0}
+    ports:
+      - "3000:3000"

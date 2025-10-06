@@ -1,34 +1,68 @@
-# Include any files or directories that you don't want to be copied to your
-# container here (e.g., local build artifacts, temporary files, etc.).
-#
-# For more help, visit the .dockerignore file reference guide at
-# https://docs.docker.com/go/build-context-dockerignore/
+# ================================
+# Node & Dependency Files
+# ================================
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tgz
 
-**/.classpath
+# ================================
+# Build Outputs
+# ================================
+.next/cache
+.next/trace
+.next/server/**/*.map
+dist
+build
+coverage
+*.log
+
+# ================================
+# Environment & Secrets
+# ================================
+.env
+.env.*
+secrets.*
+*.pem
+*.key
+*.crt
+
+# ================================
+# Docker & Config Files
+# ================================
+Dockerfile
+Dockerfile.*
+docker-compose*
+compose.yaml
+compose.yml
 **/.dockerignore
-**/.env
-**/.git
-**/.gitignore
-**/.project
-**/.settings
-**/.toolstarget
-**/.vs
-**/.vscode
-**/.next
-**/.cache
-**/*.*proj.user
-**/*.dbmdl
-**/*.jfm
-**/charts
-**/docker-compose*
-**/compose.y*ml
-**/Dockerfile*
-**/node_modules
-**/npm-debug.log
-**/obj
-**/secrets.dev.yaml
-**/values.dev.yaml
-**/build
-**/dist
-LICENSE
+
+# ================================
+# Git & IDE Stuff
+# ================================
+.git
+.gitignore
+.gitattributes
+.vscode
+.idea
+*.swp
+*.swo
+*.bak
+
+# ================================
+# Platform-Specific
+# ================================
+.DS_Store
+Thumbs.db
+
+# ================================
+# Docs, tests, and misc
+# ================================
 README.md
+LICENSE
+docs/
+test/
+tests/
+examples/
+scripts/
