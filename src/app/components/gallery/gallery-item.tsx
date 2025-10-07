@@ -18,15 +18,8 @@ export default function GalleryItem({
   return (
     <div className="gallery-item">
       {/* <img src={image} alt={title} /> */}
-      <Image
-        src={image}
-        alt={title}
-        layout="fill"
-        objectFit="cover" // Adjust as needed
-      />
-      <div className="gallery-item-title">
-        {title}
-      </div>
+      <Image src={image} alt={title} fill style={{ objectFit: "cover" }} />
+      <div className="gallery-item-title">{title}</div>
       <div className="gallery-item-content">
         <h2>{title}</h2>
         <p>{description}</p>
