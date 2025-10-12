@@ -19,13 +19,13 @@
     "docker-compose:down": "docker compose down --rmi local --volumes"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
     "@types/nodemailer": "^6.4.15",
     "dotenv": "^16.4.5",
     "framer-motion": "^11.2.11",
     "husky": "^9.0.11",
     "next": "^14.2.32",
     "nodemailer": "^6.9.14",
-    "phosphor-react": "^1.4.1",
     "react": "^18",
     "react-dom": "^18",
     "sharp": "^0.34.4"

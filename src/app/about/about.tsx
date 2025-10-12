@@ -1,6 +1,6 @@
 "use client";
 import ArrowBtn from "../components/arrow-btn/arrow-btn";
-import { FilePdf } from "phosphor-react";
+import { FilePdfIcon } from "@phosphor-icons/react";
 export default function About() {
   const openResume = () => {
     // resume in pdf format in public folder
@@ -18,20 +18,27 @@ export default function About() {
           <div className="about-text">
             <h2>Hi, I&apos;m Soumil</h2>
             <p>
-            I am a passionate software developer currently in my final year of college, where I am honing my skills in computer science and software engineering. 
-            With a solid foundation in data structures, algorithms, and object-oriented programming, I enjoy tackling complex problems and turning ideas into efficient, scalable solutions. 
-            I am constantly exploring new technologies and methodologies to stay at the forefront of the industry. My academic journey, combined with hands-on project experience, 
-            has equipped me with the tools and mindset to contribute effectively in dynamic development environments. 
-            I&apos;m excited to bring my skills and enthusiasm to real-world challenges as I transition into a professional software development role.
+              I am a passionate software developer currently in my final year of
+              college, where I am honing my skills in computer science and
+              software engineering. With a solid foundation in data structures,
+              algorithms, and object-oriented programming, I enjoy tackling
+              complex problems and turning ideas into efficient, scalable
+              solutions. I am constantly exploring new technologies and
+              methodologies to stay at the forefront of the industry. My
+              academic journey, combined with hands-on project experience, has
+              equipped me with the tools and mindset to contribute effectively
+              in dynamic development environments. I&apos;m excited to bring my
+              skills and enthusiasm to real-world challenges as I transition
+              into a professional software development role.
               <br />
-              <br/>
+              <br />
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
               tincidunt, augue nec ultricies ultricies, libero libero facilisis
               purus, nec ultricies libero libero nec. Sed tincidunt, augue nec
               ultricies ultricies, libero libero facilisis purus, nec ultricies
               libero libero nec.
               <br />
-              <br/>
+              <br />
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
               tincidunt, augue nec ultricies ultricies, libero libero facilisis
               purus, nec ultricies libero libero nec. Sed tincidunt, augue nec
@@ -40,7 +47,11 @@ export default function About() {
               <br />
             </p>
             <div className="resume-btn">
-              <ArrowBtn name="Resume" onClick={openResume} icon={<FilePdf />} />
+              <ArrowBtn
+                name="Resume"
+                onClick={openResume}
+                icon={<FilePdfIcon />}
+              />
             </div>
           </div>
         </div>

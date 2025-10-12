@@ -4,14 +4,14 @@ import About from "./about/about";
 import Experience from "./experience/experience";
 import Projects from "./projects/projects";
 import Contact from "./contact/contact";
-import "./styles.css";
 import Footer from "./components/footer/footer";
+import "./styles.css";
 
 export default function Page() {
   return (
     <>
       <Navbar />
-      <Home /> 
+      <Home />
       <About />
       <Experience />
       <Projects />
