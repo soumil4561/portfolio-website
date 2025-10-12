@@ -15,7 +15,7 @@ export const Reveal = ({
       //eslint-disable-next-line
       mainControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
 
   return (
     <div ref={ref} className={className}>
