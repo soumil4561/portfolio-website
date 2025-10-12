@@ -20,9 +20,7 @@ export default function Home() {
             Hi, I&apos;m {(info as { about: { fname: string } }).about.fname}
             {/* {info.about.designation} */}
           </h1>
-          <p>
-            {info.about.tagline}
-          </p>
+          <p>{info.about.tagline}</p>
         </div>
       </div>
     </section>

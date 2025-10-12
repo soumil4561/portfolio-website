@@ -48,7 +48,6 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
-      "next lint --fix",
       "prettier --write"
     ],
     "*.{css,scss,md}": [
