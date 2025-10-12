@@ -6,12 +6,12 @@ import { contact } from "../data/info";
 import { motion, useInView } from "framer-motion";
 import ArrowBtn from "../components/arrow-btn/arrow-btn";
 import {
-  GithubLogo,
-  LinkedinLogo,
-  Key,
-  Envelope,
-  Question,
-} from "phosphor-react";
+  GithubLogoIcon,
+  LinkedinLogoIcon,
+  KeyIcon,
+  EnvelopeIcon,
+  QuestionIcon,
+} from "@phosphor-icons/react";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -29,8 +29,8 @@ export default function Contact() {
   };
 
   const handleClick = (e: React.MouseEvent | React.KeyboardEvent) => {
-    handleSubmit(e).catch(error => {
-      console.error('Error during form submission:', error);
+    handleSubmit(e).catch((error) => {
+      console.error("Error during form submission:", error);
     });
   };
 
@@ -119,15 +119,15 @@ export default function Contact() {
                 }}
                 icon={
                   item.icon === "github" ? (
-                    <GithubLogo size={20} />
+                    <GithubLogoIcon size={20} />
                   ) : item.icon === "linkedin" ? (
-                    <LinkedinLogo size={20} />
+                    <LinkedinLogoIcon size={20} />
                   ) : item.icon === "key" ? (
-                    <Key size={20} />
+                    <KeyIcon size={20} />
                   ) : item.icon === "envelope" ? (
-                    <Envelope size={20} />
+                    <EnvelopeIcon size={20} />
                   ) : (
-                    <Question size={20} />
+                    <QuestionIcon size={20} />
                   )
                 }
                 key={index}
